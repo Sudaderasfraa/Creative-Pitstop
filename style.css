@@ -143,9 +143,9 @@ body{
 #hero{
     background-image: url("img/ABOUT/CREATIVE PITSTOP.jpeg");
     background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("img/banner/CREATIVE\ PITSTOP.jpeg");
-    height: 90vh;
+    height: 50vh;
     width: 100%;
-    background-size: 100% 100%;
+    background-size: cover;
     padding: 0 80px;
     display: flex;
     flex-direction: column;
@@ -520,9 +520,10 @@ footer .copyright{
 }
 
 #blog img {
+    display: block;
     width: 100%;
-    height: 300px;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
 }
 
 #blog .blog-details {
@@ -581,13 +582,13 @@ footer .copyright{
 }
 
 #about-head img{
-    width: 50%;
+    width: 40%;
     height: auto;
     border-radius: 10px;
 }
 
 #about-head div{
-    width: 50%;
+    flex: 1;
 }
 
 #about-app{
@@ -774,6 +775,13 @@ footer .copyright{
 #banner{
     height: 20vh;
 }
+
+#blog .blog-img,
+#blog .blog-details {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+}
 }
 
 @media (max-width: 477px){
@@ -791,7 +799,9 @@ footer .copyright{
     }
     #hero{
         padding: 0 20px;
-        background-position: 55%;
+        background-position: center;
+        align-items: center;
+        text-align: center;
     }
     #feature{
         justify-content: space-between;
@@ -831,7 +841,7 @@ footer .copyright{
     #blog .blog-box {
         display:flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
     #blog .blog-img {
@@ -842,6 +852,7 @@ footer .copyright{
 
     #blog .blog-details {
         width: 100%;
+        text-align: center;
     }
 
     /*About Page*/
@@ -849,12 +860,13 @@ footer .copyright{
     #about-head {
         flex-direction: column;
     }
-    #abot-head img {
-        width: 100%;
+    #about-head img {
+        width: 80%;
+        max-width: 200px;
         margin-bottom: 20px;
     }
-    #abot-head div {
-        padding-left: 0px;
+    #about-head div {
+        width: 100%;
     }
     #about-app .video{
         width: 100%;
@@ -867,4 +879,32 @@ footer .copyright{
         width: 100%;
         padding: 30px;
     }
+}
+
+.banner-personalizado {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("img/About/CREATIVE\ PITSTOP.jpeg");
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+}
+
+.banner-personalizado h4{
+    padding-bottom: 15px;
+    color:#ffffff;
+}
+
+.banner-personalizado h1{
+    color: #ffffff;
+}
+
+.banner-personalizado h2, 
+.banner-personalizado p {
+    color: #ffffff;
 }
